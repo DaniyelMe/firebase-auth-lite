@@ -134,7 +134,7 @@ export default class Auth {
 			Object.defineProperty(data, 'expiresAt', { value: Date.parse(response.headers.get('date')) + 3600 * 1000 });
 
 			// Remove unnecessary property
-			delete updatedData.kind;
+			delete data.kind;
 			return data;
 		});
 	}
